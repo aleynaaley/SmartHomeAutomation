@@ -1,7 +1,7 @@
 package controllers;
 
 import devices.Device;
-import scenarios.Scenario;
+//import scenarios.Scenario;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -43,6 +43,7 @@ public class SmartHomeController {
      */
     public void addDevice(Device device) {
         devices.add(device);
+        System.out.println(device.getName() + " sisteme eklendi.");
     }
      
     /**
@@ -88,8 +89,9 @@ public class SmartHomeController {
      * Senaryo nesnesi, cihazları nasıl yöneteceğini kendi execute metodunda tanımlar.
      *
      * @param scenario Çalıştırılacak senaryo
-     */
+     
     public void runScenario(Scenario scenario) {
         scenario.execute(devices);
     }
+        */
 }
