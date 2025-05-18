@@ -1,5 +1,5 @@
 package devices;
-
+import devices.states.OffState;
 /**
  * Light sınıfı, bir ışık cihazını temsil eder.
  * Device arayüzünü uygulayarak açma, kapama ve durum kontrolü özelliklerini sağlar.
