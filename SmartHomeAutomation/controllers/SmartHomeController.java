@@ -44,14 +44,42 @@ public class SmartHomeController {
     public void addDevice(Device device) {
         devices.add(device);
     }
+     
+    /**
+     * Sistemdeki cihazların listesini döner.
+     * Bu metod, diğer bileşenlerin cihazlara erişmesini sağlar.
+     *
+     * @return Cihaz listesi
+     */
+    public List<Device> getDevices() {
+        return devices;
+    }
+
+    
+    /**
+     * Sistemdeki tüm cihazları açar.
+     */
+    public void turnOnAllDevices() {
+        for (Device device : devices) {
+            device.turnOn();
+        }
+    }
+
+      /**
+     * Sistemdeki tüm cihazları kapatır.
+     */
+    public void turnOffAllDevices() {
+        for (Device device : devices) {
+            device.turnOff();
+        }
+    }
 
     /**
-     * Sistemdeki tüm cihazları çalıştırır (turnOn() metodunu çağırır).
-     * Örneğin "Tüm cihazları başlat" ya da "evdeyim modunu aktif et" gibi bir senaryo için kullanılır.
+     * Sistemdeki tüm cihazların durumlarını listeler.
      */
-    public void activateAllDevices() {
-        for (Device d : devices) {
-            d.turnOn(); // Her cihazın kendi turnOn() davranışı çağrılır (polimorfizm!)
+    public void printAllDeviceStatus() {
+        for (Device device : devices) {
+            System.out.println(device.getClass().getSimpleName() + " is " + (device.isOn() ? "ON" : "OFF"));
         }
     }
 
