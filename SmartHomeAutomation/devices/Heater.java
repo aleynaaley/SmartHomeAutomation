@@ -1,5 +1,5 @@
 public package devices;
-
+import devices.states.OffState;
 /**
  * Heater sınıfı, akıllı ev sistemine entegre edilebilecek bir ısıtıcı cihazını temsil eder.
  * Bu sınıf, Device soyut sınıfından türetilmiştir.
