@@ -1,28 +1,41 @@
 package devices;
 
+import devices.states.DeviceState;
+import devices.states.OffState;
+
 /**
- * Device arayüzü, akıllı ev sistemindeki tüm cihazların ortak davranışlarını tanımlar.
- * Her cihaz açılabilir (turnOn) ve kapatılabilir (turnOff).
- * Ayrıca, cihazın açık olup olmadığını sorgulamak için isOn() metodu bulunur.
+ * Temel cihaz sınıfı, State desenine uygun olarak davranır.
  */
-public interface Device {
+public abstract class Device {
+    protected String name;
+    protected DeviceState state;
 
-    /**
-     * Cihazı açmak için çağrılır.
-     * Örneğin, ışıklar için lambayı yakar, klima için çalışmayı başlatır.
-     */
-    void turnOn();
+    public Device(String name) {
+        this.name = name;
+        this.state = new OffState(); // Başlangıç durumu
+    }
 
-    /**
-     * Cihazı kapatmak için çağrılır.
-     * Örneğin, ışıklar için lambayı söndürür, klima için durdurur.
-     */
-    void turnOff();
+    public String getName() {
+        return name;
+    }
 
-    /**
-     * Cihazın açık mı kapalı mı olduğunu döner.
-     * 
-     * @return true ise cihaz açık, false ise kapalıdır.
-     */
-    boolean isOn();
+    public void setState(DeviceState newState) {
+        this.state = newState;
+    }
+
+    public DeviceState getState() {
+        return state;
+    }
+
+    public boolean isOn() {
+        return "ON".equals(state.getStateName());
+    }
+
+    public void turnOn() {
+        state.turnOn(this);
+    }
+
+    public void turnOff() {
+        state.turnOff(this);
+    }
 }
