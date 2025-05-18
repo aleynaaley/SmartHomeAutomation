@@ -14,35 +14,10 @@ public class Heater extends Device {
      *
      * @param name Isıtıcının ismi
      */
-    public Heater(String name) {
+     public Heater(String name) {
         super(name);
-        this.temperature = 20; // Varsayılan sıcaklık
-    }
-
-    /**
-     * Isıtıcıyı açar ve konsola bilgi verir.
-     */
-    @Override
-    public void turnOn() {
-        if (!isOn) {
-            isOn = true;
-            System.out.println(getName() + " is turned ON. Current temperature: " + temperature + "°C");
-        } else {
-            System.out.println(getName() + " is already ON.");
-        }
-    }
-
-    /**
-     * Isıtıcıyı kapatır ve konsola bilgi verir.
-     */
-    @Override
-    public void turnOff() {
-        if (isOn) {
-            isOn = false;
-            System.out.println(getName() + " is turned OFF.");
-        } else {
-            System.out.println(getName() + " is already OFF.");
-        }
+        this.temperature = 20;
+        this.state = new OffState();
     }
 
     /**
@@ -68,7 +43,7 @@ public class Heater extends Device {
      * Isıtıcının durumunu konsola yazdırır.
      */
     public void getStatus() {
-        String status = isOn ? "ON" : "OFF";
+        String status = isOn() ? "ON" : "OFF";
         System.out.println(getName() + " is " + status + " | Temperature: " + temperature + "°C");
     }
 }
