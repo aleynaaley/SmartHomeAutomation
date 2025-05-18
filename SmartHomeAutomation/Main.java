@@ -41,6 +41,6 @@ public class Main {
     // Son durum yazdırılır
     System.out.println("\nFinal durum:");
     controller.printAllDeviceStatus();
+ }
 }
-
     
