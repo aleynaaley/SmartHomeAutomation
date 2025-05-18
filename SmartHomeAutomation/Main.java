@@ -1,4 +1,10 @@
-    // Tekil SmartHomeController nesnesi alınır
+import controllers.SmartHomeController;
+import devices.Heater;
+import devices.Light;
+
+public class Main {
+    public static void main(String[] args) {
+            // Tekil SmartHomeController nesnesi alınır
     SmartHomeController controller = SmartHomeController.getInstance();
 
     // Cihazlar oluşturulur
@@ -36,3 +42,5 @@
     System.out.println("\nFinal durum:");
     controller.printAllDeviceStatus();
 }
+
+    
