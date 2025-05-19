@@ -47,6 +47,4 @@ public class Heater extends Device {
         System.out.println(getName() + " is " + status + " | Temperature: " + temperature + "°C");
     }
 }
- Main {
-    
-}
+ 
