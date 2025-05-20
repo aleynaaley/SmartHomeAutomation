@@ -11,33 +11,34 @@ Akıllı Ev Otomasyon Sistemi, evdeki cihazları merkezi bir şekilde kontrol et
 - Uygulamanın tüm cihaz kontrolünün tek bir merkezden yönetilmesi (Singleton Pattern)
 
 ## 🧱 Proje Yapısı
-smart-home-automation/
-├── devices/ # Cihaz sınıfları ve durumları
-│ ├── Device.java # Soyut cihaz sınıfı
-│ ├── Light.java # Işık cihazı
-│ ├── Heater.java # Isıtıcı cihazı
-│ └── states/ # State Pattern bileşenleri
-│ ├── DeviceState.java # Durum arayüzü
-│ ├── OnState.java # Açık durumu
-│ └── OffState.java # Kapalı durumu
-│
-├── scenarios/ # Template Method Pattern bileşenleri
-│ ├── SmartHomeScenario.java # Şablon senaryo sınıfı
-│ ├── NightModeScenario.java # Gece modu senaryosu
-│ ├── DayModeScenario.java # Gündüz modu senaryosu
-│ ├── VacationModeScenario.java # Tatil modu senaryosu
-│ └── ReturnFromVacationScenario.java # Tatil dönüşü senaryosu
-│
-├── composite/ # Composite Pattern bileşenleri
-│ ├── DeviceComponent.java # Soyut bileşen sınıfı
-│ ├── SingleDevice.java # Tekil cihaz sarmalayıcı
-│ └── DeviceGroup.java # Cihaz grubu sınıfı
-│
-├── controllers/ # Singleton kontrol sınıfı
-│ └── SmartHomeController.java # Ana kontrol sınıfı
-│
-├── Main.java # Uygulamanın giriş noktası
 
+```text
+smart-home-automation/
+├── devices/                         # Cihaz sınıfları ve durumları
+│   ├── Device.java                  # Soyut cihaz sınıfı
+│   ├── Light.java                   # Işık cihazı
+│   ├── Heater.java                  # Isıtıcı cihazı
+│   └── states/                      # State Pattern bileşenleri
+│       ├── DeviceState.java         # Durum arayüzü
+│       ├── OnState.java             # Açık durumu
+│       └── OffState.java            # Kapalı durumu
+│
+├── scenarios/                       # Template Method Pattern bileşenleri
+│   ├── Scenario.java                # Şablon senaryo sınıfı
+│   ├── NightModeScenario.java       # Gece modu senaryosu
+│   ├── MorningModeScenario.java     # Gündüz modu senaryosu
+│   ├── VacationModeScenario.java    # Tatil modu senaryosu
+│   └── ReturnVacationScenario.java  # Tatil dönüşü senaryosu
+│
+├── composite/                       # Composite Pattern bileşenleri
+│   ├── DeviceComponent.java         # Soyut bileşen sınıfı
+│   ├── SingleDevice.java            # Tekil cihaz sarmalayıcı
+│   └── DeviceGroup.java             # Cihaz grubu sınıfı
+│
+├── controllers/                     # Singleton kontrol sınıfı
+│   └── SmartHomeController.java     # Ana kontrol sınıfı
+│
+├── Main.java                        # Uygulamanın giriş noktası
 Bu yapı, proje içerisindeki tasarım desenlerinin mantıksal yerleşimini ve görevlerini daha iyi anlamanızı sağlar.
 
 ## 🧠 Kullanılan Tasarım Desenleri
