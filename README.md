@@ -40,7 +40,7 @@ smart-home-automation/
 │
 ├── Main.java                        # Uygulamanın giriş noktası
 Bu yapı, proje içerisindeki tasarım desenlerinin mantıksal yerleşimini ve görevlerini daha iyi anlamanızı sağlar.
-
+```
 ## 🧠 Kullanılan Tasarım Desenleri
 
 | Tasarım Deseni     | Kullanım Amacı |
