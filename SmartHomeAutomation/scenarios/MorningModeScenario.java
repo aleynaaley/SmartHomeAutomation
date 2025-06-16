@@ -6,8 +6,9 @@ import devices.Light;
 
 /**
  * Sabah modu senaryosudur.
- * Işıkları açar,tüm ısıtıcılar açık kalabilir.
+ * Işıkları kapanır ,tüm ısıtıcılar ve kilit sistemi açık kalabilir.
  */
+
 public class MorningModeScenario extends Scenario {
 
     @Override
@@ -16,12 +17,11 @@ public class MorningModeScenario extends Scenario {
         SmartHomeController controller = SmartHomeController.getInstance();
 
         for (Device device : controller.getDevices()) {
-            if (device instanceof Light && !device.isOn()) {
-                device.turnOn();
+            if (device instanceof Light && device.isOn()) {
+                device.turnOff();
             }
         }
 
-        System.out.println("Işıklar açıldı.\n");
-        System.out.println("Gunaydın :)\n");
+        System.out.println("Işıklar Kapatıldı.\n");
     }
 }
