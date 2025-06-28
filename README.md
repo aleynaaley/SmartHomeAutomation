@@ -63,10 +63,10 @@ javac Main.java
 java Main
 ```
 
-## ▶️ Beklenen Çıktı
+## 🎯 Beklenen Çıktı
 Mevcut projenin `main.java` dosyası çalıştırıldığında beklenen çıktı aşağıdaki gibidir: 
 
-
+![Beklenen çıktı](images/çıktı1.png) 
 
 ## 🚧 Gelecekte Yapılacaklar
 Kullanıcı arayüzü (GUI) entegrasyonu
