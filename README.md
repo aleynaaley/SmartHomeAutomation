@@ -18,6 +18,8 @@ smart-home-automation/
 │   ├── Device.java                  # Soyut cihaz sınıfı
 │   ├── Light.java                   # Işık cihazı
 │   ├── Heater.java                  # Isıtıcı cihazı
+│   ├── DoorLockSystem.java          # Kapı kilit
+│   ├── Refrigerator                 # Soğutucu cihazı
 │   └── states/                      # State Pattern bileşenleri
 │       ├── DeviceState.java         # Durum arayüzü
 │       ├── OnState.java             # Açık durumu
@@ -60,6 +62,12 @@ cd smart-home-automation
 javac Main.java
 java Main
 ```
+
+## ▶️ Beklenen Çıktı
+Mevcut projenin `main.java` dosyası çalıştırıldığında beklenen çıktı aşağıdaki gibidir: 
+
+
+
 ## 🚧 Gelecekte Yapılacaklar
 Kullanıcı arayüzü (GUI) entegrasyonu
 
