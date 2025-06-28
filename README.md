@@ -64,9 +64,10 @@ java Main
 ```
 
 ## 🎯 Beklenen Çıktı
-Mevcut projenin `main.java` dosyası çalıştırıldığında beklenen çıktı aşağıdaki gibidir: 
+Mevcut projenin `main.java` dosyası çalıştırıldığında beklenen çıktının ilk kısmı aşağıdaki gibidir: 
 
 ![Beklenen çıktı](images/çıktı1.png) 
+![Beklenen çıktı](images/çıktı2.png) 
 
 ## 🚧 Gelecekte Yapılacaklar
 Kullanıcı arayüzü (GUI) entegrasyonu
